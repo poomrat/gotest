@@ -1,8 +1,10 @@
 package fizzbuzz
 
+import "strconv"
+
 func Say(n int) string {
-	if n == 2 {
-		return "2"
+	if n == 3 {
+		return "fizz"
 	}
-	return "1"
+	return strconv.Itoa(n)
 }
