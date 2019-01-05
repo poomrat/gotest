@@ -32,7 +32,7 @@ func TestShouldSayTwo(t *testing.T) {
 	}
 }
 
-func TestShouldSayThree(t *testing.T) {
+func TestShouldSayFizzForThree(t *testing.T) {
 	// Arrange
 
 	//Action
@@ -40,6 +40,19 @@ func TestShouldSayThree(t *testing.T) {
 
 	// Assertion
 	expected := "fizz"
+	if result != expected {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+}
+
+func TestShouldSayBuzzForFive(t *testing.T) {
+	// Arrange
+
+	//Action
+	result := fizzbuzz.Say(5)
+
+	// Assertion
+	expected := "buzz"
 	if result != expected {
 		t.Errorf("it should say %q but get %q", expected, result)
 	}
