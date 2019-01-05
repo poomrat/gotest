@@ -22,7 +22,7 @@ func TestShouldSayOne(t *testing.T) {
 func TestShouldSayTwo(t *testing.T) {
 	// Arrange
 
-	//Action
+	// Action
 	result := fizzbuzz.Say(2)
 
 	// Assertion
@@ -35,8 +35,21 @@ func TestShouldSayTwo(t *testing.T) {
 func TestShouldSayFizzForThree(t *testing.T) {
 	// Arrange
 
-	//Action
+	// Action
 	result := fizzbuzz.Say(3)
+
+	// Assertion
+	expected := "fizz"
+	if result != expected {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+}
+
+func TestShouldSayFizzFor99(t *testing.T) {
+	// Arrange
+
+	// Action
+	result := fizzbuzz.Say(99)
 
 	// Assertion
 	expected := "fizz"
@@ -48,8 +61,21 @@ func TestShouldSayFizzForThree(t *testing.T) {
 func TestShouldSayBuzzForFive(t *testing.T) {
 	// Arrange
 
-	//Action
+	// Action
 	result := fizzbuzz.Say(5)
+
+	// Assertion
+	expected := "buzz"
+	if result != expected {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+}
+
+func TestShouldSayBuzzFor100(t *testing.T) {
+	// Arrange
+
+	// Action
+	result := fizzbuzz.Say(100)
 
 	// Assertion
 	expected := "buzz"
@@ -61,8 +87,21 @@ func TestShouldSayBuzzForFive(t *testing.T) {
 func TestShouldSayFizzBuzzForFifteen(t *testing.T) {
 	// Arrange
 
-	//Action
+	// Action
 	result := fizzbuzz.Say(15)
+
+	// Assertion
+	expected := "fizzbuzz"
+	if result != expected {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+}
+
+func TestShouldSayFizzBuzzFor150(t *testing.T) {
+	// Arrange
+
+	// Action
+	result := fizzbuzz.Say(150)
 
 	// Assertion
 	expected := "fizzbuzz"
